@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita de Pavê</title>
+</head>
+<body>
+    <style>
+	    body {
+            background-color: #111;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+		li, h1, h2, p, label { 
+		    color: white;
+		}
+		iframe {
+		    border-radius: 10px; 
+		}
+		.galeria img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        } 
+		.galeria img:hover {
+            transform: scale(0.9);
+        }
+        caption {
+            background-color: white;
+            border: 1px solid #000000;
+        }
+        table {
+		  font-family: arial, sans-serif;
+		  border-collapse: collapse;  /* usado para colapsar células adjacentes e formar uma borda comun ou seja, 
+		  elimina o espaço entre as células de forma que a as bordas em torno das células se fundam em uma só*/
+		  width: 40%;
+          color:rgb(0, 0, 0);
+          background-color: white;
+		}	
+        td, th {
+		  border: 1px solid #000000;
+		  text-align: left;
+		  padding: 1px 8px 1px; /* Define uma a distância entre o conteúdo de um elemento e suas bordas.
+						   aplica-se à todas as bordas padding: 1em;
+					       vertical | horizontal padding: 5% 10%;
+						   superior | horizontal | inferior padding: 1em 2em 2em;
+						   superior | direita | inferior | esquerda padding: 2px 1em 0 1em;*/
+		}
+	</style>
+    <h1>Receita de Pavê</h1>
+
+    <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/MMl45Etv0Ss?autoplay=1&mute=1" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+</iframe>
+  </video>
+
+    <h2>Ingredientes:</h2>
+    <ul>
+        <li>1 pacote de biscoito de champanhe</li>
+        <li>1 lata de leite condensado</li>
+        <li>1 lata de creme de leite</li>
+        <li>1 xícara de leite</li>
+        <li>2 colheres de sopa de achocolatado em pó</li>
+    </ul>
+
+    <h2>Modo de preparo:</h2>
+    <ol>
+        <li>Em uma panela, misture o leite condensado, o creme de leite e o leite.</li>
+        <li>Leve ao fogo médio e mexa até a, formando um creme.</li>
+        <li>Em uma tigela, coloque os biscoitos de champanhe e umedeça-os no leite.</li>
+        <li>Em uma travessa, faça camadas alternadas de biscoitos e creme.</li>
+        <li>Finalize com o creme e polvilhe o achocolatado por cima.</li>
+        <li>Leve à geladeira por pelo menos 4 horas antes de servir.</li>
+    </ol>
+
+    <table>
+        <caption><strong>INFORMAÇÃO NUTRICIONAL</strong></caption>
+        <tr>
+            <th></th>
+            <th>100g</th>
+            <th>60g</th>
+            <th>%VD*</th>
+        </tr>
+        <tr>
+            <td>Valor energético (kcal)</td>
+            <td>168</td>
+            <td>101</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>Carboidratos (g)</td>
+            <td>22</td>
+            <td>13</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Açúcares totais (g)</td>
+            <td>21</td>
+            <td>13</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Açúcares adicionados (g)</td>
+            <td>17</td>
+            <td>10</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Proteínas (g)</td>
+            <td>2,4</td>
+            <td>1,4</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Gorduras totais (g)</td>
+            <td>7,6</td>
+            <td>4,6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>Gorduras saturadas (g)</td>
+            <td>4</td>
+            <td>2,4</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Gorduras trans (g)</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Fibras alimentares (g)</td>
+            <td>0,5</td>
+            <td>0,3</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Sódio (mg)</td>
+            <td>79</td>
+            <td>47</td>
+            <td>2</td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td colspan="4" style="text-align: left;">
+                    *Percentual de valores diários fornecidos pela porção.
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <h2>Deixe sua Avaliação:</h2>
+    <label>
+        <input type="radio" name="rating" value="Gostei"> Gostei
+    </label><br>
+    <label>
+        <input type="radio" name="rating" value="Neutro"> Neutro
+    </label><br>
+    <label>
+        <input type="radio" name="rating" value="Não gostei"> Não gostei
+    </label><br>
+
+    <p id="rating-result">Avaliação: Nenhuma avaliação ainda.</p>
+
+    <script>
+	const ratingInputs = document.querySelectorAll('input[name="rating"]');
+        ratingInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                document.getElementById('rating-result').textContent = `Avaliação: ${this.value}`;
+            });
+        });
+    </script>
+
+    <p>Bom apetite!</p>
+	
+	 <h2>Experimente Outras receitas</h2>
+
+  <div class="galeria">
+        <a href="lamen.html">
+            <img src="https://sabores-new.s3.amazonaws.com/public/2024/11/shio-lamen.jpg" alt="Pave" width="300">
+        </a>
+        <a href="brigadeiro.html">
+            <img src="imagens/brigadeiro.jpg" alt="Receita 3" width="300">
+        </a>
+    </div>
+</body>
+</html>

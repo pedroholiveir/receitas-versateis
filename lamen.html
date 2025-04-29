@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receita de Lámen</title>
+	<style>
+	    body {
+            background-color: #111;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+		li, h1, h2, p, label { 
+		    color: white;
+		}
+		iframe {
+		    border-radius: 10px;
+		}
+		.galeria img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        } 
+		.galeria img:hover {
+            transform: scale(0.9);
+        }
+        table {
+		  font-family: arial, sans-serif;
+		  border-collapse: collapse;  /* usado para colapsar células adjacentes e formar uma borda comun ou seja, 
+		  elimina o espaço entre as células de forma que a as bordas em torno das células se fundam em uma só*/
+		  width: 40%;
+          color:rgb(0, 0, 0);
+          background-color: white;
+		}	
+        td, th {
+		  border: 1px solid #000000;
+		  text-align: left;
+		  padding: 1px 8px 1px; /* Define uma a distância entre o conteúdo de um elemento e suas bordas.
+						   aplica-se à todas as bordas padding: 1em;
+					       vertical | horizontal padding: 5% 10%;
+						   superior | horizontal | inferior padding: 1em 2em 2em;
+						   superior | direita | inferior | esquerda padding: 2px 1em 0 1em;*/
+		}
+        caption {
+            background-color: white;
+            border: 1px solid #000000;
+        }
+	</style>	
+</head>
+<body>
+    <h1>Receita de Lámen</h1>
+
+    <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/M25irSaz0n0?autoplay=1&mute=1" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+</iframe>
+
+  </video>
+	
+    <h2>Ingredientes:</h2>
+    <ul>
+        <li>1 pacote de macarrão para LÁMEN (ou outro de sua preferência)</li>
+        <li>500ml de caldo de galinha ou de carne</li>
+        <li>2 colheres de sopa de molho de soja (shoyu)</li>
+        <li>1 colher de chá de óleo de gergelim</li>
+        <li>1 dente de alho picado</li>
+        <li>1 ovo cozido (opcional)</li>
+        <li>1 cebola verde picada</li>
+        <li>Legumes a gosto (como cogumelos, brotos de bambu, espinafre ou cenoura)</li>
+    </ul>
+
+    <h2>Modo de preparo:</h2>
+    <ol>
+        <li>Em uma panela, aqueça o caldo de galinha ou carne e adicione o molho de soja, óleo de gergelim e o alho picado.</li>
+        <li>Deixe ferver por cerca de 5 minutos para que os sabores se misturem.</li>
+        <li>Enquanto o caldo ferve, cozinhe o macarrão de acordo com as instruções do pacote.</li>
+        <li>Adicione os legumes que escolheu (cogumelos, cenoura, etc.) ao caldo e deixe cozinhar por mais 3 a 5 minutos.</li>
+        <li>Coloque o macarrão cozido em uma tigela e despeje o caldo com os legumes por cima.</li>
+        <li>Finalize com o ovo cozido cortado ao meio e a cebola verde picada por cima.</li>
+        <li>Sirva quente e aproveite!</li>
+    </ol>
+    <table>
+        <caption><strong>INFORMAÇÃO NUTRICIONAL</strong></caption>
+        <tr>
+            <th></th>
+            <th>85g</th>
+            <th>% VD*</th>
+        </tr>
+        <tr>
+            <td>Valor energético (kcal)</td> 
+            <td>377</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>Carboidratos (g)</td> 
+            <td>52</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Açúcares totais (g)</td> 
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Açúcares adicionados (g)</td> 
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Proteínas (g)</td> 
+            <td>8,4</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td>Gorduras totais (g)</td> 
+            <td>16</td>
+            <td>29</td>
+        </tr>
+        <tr>
+            <td>Gorduras saturadas (g)</td> 
+            <td>4,3</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Gorduras trans (g)</td> 
+            <td>0,6</td>
+            <td>**</td>
+        </tr>
+        <tr>
+            <td>Fibras alimentares (g)</td> 
+            <td>1,9</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Sódio (mg)</td> 
+            <td>1.757</td>
+            <td>73</td>
+        </tr>
+        <tfoot>
+            <tr>
+              <td colspan="3" style="text-align: left;">
+                **VD não estabelecido para gorduras trans.
+              </td>
+            </tr>
+          </tfoot>
+</table>
+
+    <h2>Deixe sua Avaliação:</h2>
+    <label>
+        <input type="radio" name="rating" value="Gostei"> Gostei
+    </label><br>
+    <label>
+        <input type="radio" name="rating" value="Neutro"> Neutro
+    </label><br>
+    <label>
+        <input type="radio" name="rating" value="Não gostei"> Não gostei
+    </label><br>
+
+    <p id="rating-result">Avaliação: Nenhuma avaliação ainda.</p>
+
+    <script>
+        const ratingInputs = document.querySelectorAll('input[name="rating"]');
+        ratingInputs.forEach(input => {
+            input.addEventListener('change', function() {
+                document.getElementById('rating-result').textContent = `Avaliação: ${this.value}`;
+            });
+        });
+    </script>
+
+    <p>Bom apetite!</p>
+
+    <h2>Experimente Outras receitas</h2>
+
+  <div class="galeria">
+        <a href="pave.html">
+            <img src="https://sabores-new.s3.amazonaws.com/public/2024/11/pave-de-chocolate-com-creme-de-mid-baunilha.png" alt="Pave" width="300">
+        </a>
+        <a href="brigadeiro.html">
+            <img src="imagens/brigadeiro.jpg" alt="Receita 3" width="300">
+        </a>
+    </div>
+</body>
+</html>
